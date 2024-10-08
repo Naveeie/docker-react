@@ -1,0 +1,19 @@
+Elastic beanstalk is efficient to run one container
+
+------------> In the I AM roles - create role and then select these 
+Search for AWSElasticBeanstalk and select the AWSElasticBeanstalkWebTier, AWSElasticBeanstalkWorkerTier and AWSElasticBeanstalkMulticontainerDocker policies. Click the Next button.
+
+---------> In the EBS to create environment
+1. choose app name as frontend
+2. then docker as platform 
+3. platform branch as 64 bit linux 2 
+4. create new service , choose the new ec2 role created , skip to preview
+5. submit and wait for it to be created .
+
+--------> Go to s3
+1. click the ebs bucket created now (find based on date if almost similar name exists
+2. permissions tab -> select 
+   1. disable ACL 
+   2. ownership to object writer
+
+----> go to ebs dashboard, view the created bucket , we will get an url  - http://frontend-env.eba-fzkw4rfq.eu-north-1.elasticbeanstalk.com/
